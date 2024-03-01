@@ -14,3 +14,9 @@ class PostList(Resource):
         schema = PostSchema(many=True)
 
         return {"results": schema.dump(posts)}
+
+
+class Hello(Resource):
+
+    def get(self):
+        return {"results": "Hello World"}
